@@ -20,12 +20,12 @@ function App() {
     desc : "Description about the third demo statement"
 },
 ]
-*/
-  return (
+*/  return (
    <>
-  <Header title= "CURD-App" searchBar = {true}/>
-  <Todos/>
+  <Header title= "CURD-Application" searchBar = {true}/>
+  <Todos title="Curd-Operations"/>
   <Footer/>
+
    </>
   );
 }
