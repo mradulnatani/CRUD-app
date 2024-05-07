@@ -1,6 +1,16 @@
 import React from 'react'
 
 export default function Todos(porps) {
+  const userData={
+    email_id : document.querySelector("#exampleFormControlInput1").innerHTML,
+    Data : document.querySelector("#exampleFormControlTextarea1").innerHTML,
+}
+let btnclick = document.querySelector(".create");
+    btnclick.addEventListener(onclick,()=>{
+    document.getElementById("output").innerHTML = userData.email_id;
+    document.getElementById("output2").innerHTML = userData.Data;
+
+})
   return (
     <>
     <h1>About....</h1>
@@ -15,15 +25,17 @@ Delete: The delete operation allows you to remove data from your database. If yo
 
 <hr/>
 <hr/>
-    <div className= "Container">
-      <form>
-        Enter gmail id :<input type='text' className='mailid'/>
-        <br/><br/>
-        Enter data to be entered : <input type='text' className='inputdata'/>
-        <br/><br/>
-        <button id='create'>Create</button>
-      </form>     
-    </div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Enter Data</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  <button className='create'>Create</button>
+  <p id='output'></p>
+  <p id='output2'></p>
+</div>
     </>
   )
 }
