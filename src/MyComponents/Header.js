@@ -1,11 +1,11 @@
 import React from 'react'
-
-export default function Header() {
+import propTypes from 'prop-types'
+export default function Header(props) {
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
   <div className="container-fluid">
-    <a className="navbar-brand" href="#">To-Do List</a>
+    <a className="navbar-brand" href="#">{props.title}</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -18,13 +18,25 @@ export default function Header() {
           <a className="nav-link" href="#">About</a>
         </li>
       </ul>
-      <form className="d-flex" role="search">
+      {props.searchBar?<form className="d-flex" role="search">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
         <button className="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      </form>:" "}
     </div>
   </div>
 </nav>
     </div>
   )
+}
+
+//sets default prop
+Header.defaultProps = {
+  //will display Your title here when no title is passed through props
+title : "Your title here",
+searchBar: true
+}
+Header.propTypes = {
+  title:propTypes.string,
+  //isRequired makes passing of searchBar mandatory
+  searchBar: propTypes.bool.isRequired
 }
