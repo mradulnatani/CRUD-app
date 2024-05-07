@@ -3,6 +3,7 @@ import Header from "./MyComponents/Header.js";
 import Todos from "./MyComponents/Todos.js";
 import Footer from "./MyComponents/Footer.js";
 function App() {
+  /*
   let curdItems =[ {
     sno : 1,
     title : "First demo statement",
@@ -19,10 +20,11 @@ function App() {
     desc : "Description about the third demo statement"
 },
 ]
+*/
   return (
    <>
   <Header title= "CURD-App" searchBar = {true}/>
-  <Todos curdItemList= {curdItems}/>
+  <Todos/>
   <Footer/>
    </>
   );
