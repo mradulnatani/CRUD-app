@@ -1,5 +1,7 @@
 import React from 'react'
 import '../MyComponents/Todos.css'
+import propTypes from 'prop-types'
+
 export default function Todos(porps) {
   return (
     <>
@@ -17,7 +19,7 @@ Delete: The delete operation allows you to remove data from your database. If yo
 <hr/>
 <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Email address</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" value={user.email}/>
 </div>
 <div class="mb-3">
   <label for="exampleFormControlTextarea1" class="form-label">Enter Data</label>
@@ -25,35 +27,8 @@ Delete: The delete operation allows you to remove data from your database. If yo
   <button className='create'>Create</button>
 </div>
 
-<table className="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Mail id</th>
-      <th scope="col">Data Stored</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2"></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+<h2>empty <span class="badge text-bg-secondary"><button id='DeleteButton'>Delete</button> <button id='EditButton'>Edit</button></span></h2>
+
     </>
   )
 }
