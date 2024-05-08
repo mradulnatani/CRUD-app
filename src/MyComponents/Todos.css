@@ -2,14 +2,23 @@
     background-color: black;
     color: white;
     border: 5px solid red;
+    margin: 0px;
+    padding: 0px;
 }
 
 .mb-3{
     width: 450px;
     align-items: center;
+    border: 5px solid black;
+    border-radius: 5px;
 }
 
 .AboutHeading{
     background-color: black;
     color: white;
+}
+.create{
+    width: 400px;
+    background-color: rgb(113, 113, 247);
+    color: black;
 }
