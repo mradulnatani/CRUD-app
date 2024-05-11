@@ -1,8 +1,8 @@
 import React from 'react'
 import '../MyComponents/Todos.css'
-import propTypes from 'prop-types'
+//import propTypes from 'prop-types'
 
-export default function Todos(porps) {
+export default function Todos(props) {
   return (
     <>
     <h1 className='AboutHeading'>About....</h1>
@@ -19,7 +19,7 @@ Delete: The delete operation allows you to remove data from your database. If yo
 <hr/>
 <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Email address</label>
-  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" value={user.email}/>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
 </div>
 <div class="mb-3">
   <label for="exampleFormControlTextarea1" class="form-label">Enter Data</label>
