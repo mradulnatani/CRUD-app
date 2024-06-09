@@ -14,3 +14,4 @@ dbConnection().then((resp)=>{
     console.log(resp);
     console.log("Connection established Successfully !!!");
 })
+module.exports = dbConnection;
