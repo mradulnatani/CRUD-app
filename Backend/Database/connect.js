@@ -14,7 +14,9 @@ const url = 'mongodb://localhost:27017/CRUD-appdb';
         Data : String
     })
     const setModel = mongoose.model('user-data',setSchema);
-    let result = setModel.save();
+    let data = new setModel({Email:"mradulnatani0@gmail.com",Name:"Mradul Natani",Data:"Let us see what happens further"});
+    let result = await data.save();
+    console.log(result);
     //return db.collection('user-data');
     
 }
