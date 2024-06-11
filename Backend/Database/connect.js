@@ -1,13 +1,21 @@
 const {MongoClient} = require('mongodb');
+const mongoose = require('mongoose');
 const path = require('path');
 const database = 'CRUD-appdb';
-const url = 'mongodb://localhost:27017';
-const client = new MongoClient(url);
+const url = 'mongodb://localhost:27017/CRUD-appdb';
+//const client = new MongoClient(url);
 
  async function dbConnection(){
-    const result = await client.connect();
-    const db = result.db(database);
-    return db.collection('user-data');
+    await mongoose.connect(url);
+   // const result = await client.connect();
+    const setSchema = new mongoose.Schema({
+        Email : String,
+        Name : String,
+        Data : String
+    })
+    const setModel = mongoose.model('user-data',setSchema);
+    return setModel;
+    //return db.collection('user-data');
     
 }
 dbConnection().then((resp)=>{
