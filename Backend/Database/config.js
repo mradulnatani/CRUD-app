@@ -1,10 +1,13 @@
-const {MongoClient} = require('mongodb');
+//const {MongoClient} = require('mongodb');
 const mongoose = require('mongoose');
-const path = require('path');
-const database = 'CRUD-appdb';
+//const path = require('path');
+//const database = 'CRUD-appdb';
 const url = 'mongodb://localhost:27017/CRUD-appdb';
 //const client = new MongoClient(url);
+mongoose.connect(url);
 
+
+/*
  async function dbConnection(){
     await mongoose.connect(url);
    // const result = await client.connect();
@@ -21,7 +24,8 @@ const url = 'mongodb://localhost:27017/CRUD-appdb';
     
 }
 dbConnection().then((resp)=>{
-    console.log(resp);
+    console.log(resp ?? "DONE !!");
     console.log("Connection established Successfully !!!");
 })
 module.exports = dbConnection;
+*/
