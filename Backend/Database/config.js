@@ -1,11 +1,16 @@
 //const {MongoClient} = require('mongodb');
+const dbConnection=()=>{
+
 const mongoose = require('mongoose');
 //const path = require('path');
 //const database = 'CRUD-appdb';
 const url = 'mongodb://localhost:27017/CRUD-appdb';
 //const client = new MongoClient(url);
 mongoose.connect(url);
+}
+dbConnection();
 
+module.exports = dbConnection;
 
 /*
  async function dbConnection(){
