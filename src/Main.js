@@ -8,7 +8,7 @@ export default function Main() {
     return(
         <> 
         Enter Data:<input type='text'onChange={getData} style={{margin:20, height:20, width:400, padding:0}}></input>
-        <button onClick={()=>{setPrint(true)}}>Submit</button>
+        <button onClick={()=>{setPrint(true)}} style={{width:200}}>Submit</button>
         {
             print?
             <p>{data}</p>
