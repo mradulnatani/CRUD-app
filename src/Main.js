@@ -11,7 +11,7 @@ export default function Main() {
         <button onClick={()=>{setPrint(true)}}>Submit</button>
         {
             print?
-            <h5>{data}</h5>
+            <p>{data}</p>
             :null
         }
         </>
