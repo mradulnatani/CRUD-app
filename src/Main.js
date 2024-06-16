@@ -7,11 +7,11 @@ export default function Main() {
     }
     return(
         <> 
-        Enter Data:<input type='text'onChange={getData} style={{margin:20, height:500, width:700, padding:0}}></input>
+        Enter Data:<input type='text'onChange={getData} style={{margin:20, height:20, width:400, padding:0}}></input>
         <button onClick={()=>{setPrint(true)}}>Submit</button>
         {
             print?
-            <h1>{data}</h1>
+            <h5>{data}</h5>
             :null
         }
         </>
