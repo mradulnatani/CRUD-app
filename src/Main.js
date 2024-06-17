@@ -1,25 +1,27 @@
 import React,{useState} from 'react';
 export default function Main() {
-    const [data,setData] = useState(null);
-    const [print,setPrint] = useState(false);
-    function getData(val){
-        setData(val.target.value);
+    const[print,setPrint] = useState("");
+    const[info,getInfo] = useState("");
+    const[dlt,setDlt]=useState("");
+    function getFormData1(e){
+        console.log(info);
+    }
+    function getFormData2(e){
+        console.log(dlt);
+    }
+    function getFormData0(e){
+        console.log(print);
     }
     return(
         <> 
-        Enter Data:<input type='text'onChange={getData} style={{margin:20, height:20, width:400, padding:0}}></input>
-        <button onClick={()=>{setPrint(true)}} style={{width:200}}>Submit</button>
-        {
-            print?
-            <p>{data}</p>
-            :null
-        }
+        Enter Data:<input type='text'onChange={(e)=>{setPrint(e.target.value)}} style={{margin:20, height:20, width:400, padding:0}}></input>
+        <button style={{width:200}} onClick={getFormData0}>Submit</button>
         <br/> <br/>
-              Enter id to read the data: <input type='text' style={{margin:20, height:20, width:400, padding:0}}></input>
-              <button style={{width:200}}>Read</button>
+              Enter id to read the data: <input type='text' onChange={(e)=>{getInfo(e.target.value)}}  style={{margin:20, height:20, width:400, padding:0}}></input>
+              <button style={{width:200}} onClick={getFormData1}>Read</button>
               <br/> <br/>
-              Enter id of data to be deleted: <input type='text' style={{margin:20, height:20, width:400, padding:0}}></input>
-              <button style={{backgroundColor:'red',width:200}}>Delete</button>
+              Enter id of data to be deleted: <input type='text' onChange={(e)=>{setDlt(e.target.value)}}style={{margin:20, height:20, width:400, padding:0}}></input>
+              <button style={{backgroundColor:'red',width:200}} onClick={getFormData2}>Delete</button>
 
         </>
     )
