@@ -4,12 +4,15 @@ export default function Main() {
     const[info,getInfo] = useState("");
     const[dlt,setDlt]=useState("");
     function getFormData1(e){
+        e.preventDefault();
         console.log(info);
     }
     function getFormData2(e){
+        e.preventDefault();
         console.log(dlt);
     }
     function getFormData0(e){
+        e.preventDefault();
         console.log(print);
     }
     return(
