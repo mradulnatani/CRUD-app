@@ -37,6 +37,7 @@ export default function Main() {
       {show ? <h1 style={{marginLeft:'700px'}}>{data}</h1> : <h1>No Data</h1>}
       {taskArray.map((task, index) => (
         <h3 key={index}>{task}<button onClick={()=>{deleteTask(index)}} style={{height:'50px',width:'100px',borderRadius:'5px',marginLeft:'700px',backgroundColor:'red',color:'white'}}>Delete</button><button style={{height:'50px',width:'100px',borderRadius:'5px',marginLeft:'2px',backgroundColor:'blue',color:'white'}} onClick={() => editTask(index, prompt('Enter updated task:'))}>Edit</button>
+        <hr/>
 </h3>
       ))}
     </>

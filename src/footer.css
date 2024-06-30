@@ -1,0 +1,6 @@
+.footers li p{
+    display: inline-flex;
+    list-style: none;
+    float: left;
+    margin-right:50px;
+}
