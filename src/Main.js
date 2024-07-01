@@ -33,7 +33,7 @@ export default function Main() {
         <h1 style={{marginTop:'170px',color:'white'}}>Enter data:</h1>
        <input placeholder='Enter Data' style={{height:'100px',width:'500px',borderRadius:'5px', marginTop:'10px',marginLeft:'100px'}}type="text" value={data} onChange={settingData} />
         <br />
-        <button onClick={showData} style={{height:'40px',width:'100px',borderRadius:'5px',marginLeft:'500px',backgroundColor:'blue',color:'white'}} type="button">Save</button>
+        <button onClick={showData} style={{height:'40px',width:'100px',borderRadius:'5px',marginLeft:'100px',backgroundColor:'blue',color:'white'}} type="button">Save</button>
       </form>
       <br/>
       <h3>Output:</h3>
